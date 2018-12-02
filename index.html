@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/jquery.params.js"></script>
+    <title>a页面</title>
+    <script>
+        $(function(){
+             name = $("#name").text();
+             age = $("#age").text();
+ 
+            $("#btn").on("click",function(){
+               jump1();
+            });
+        });
+ 
+        function jump1(){
+            url = "b.html?name="+name+"&age="+age;//此处拼接内容
+            window.location.href = url;
+        }
+    </script>
+</head>
+<body>
+   <div id="name">tony</div>
+   <div id="age">23</div>
+   <button id="btn">跳转</button>
+</body>
+</html>
